@@ -1,66 +1,241 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏠 KosanSPK - Smart Boarding House Recommendation System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A comprehensive web-based decision support system that helps students and renters find the perfect boarding house (kos) using advanced recommendation algorithms.
 
-## About Laravel
+## 🎯 Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+KosanSPK is a Laravel-powered web application designed to simplify the process of finding suitable boarding houses. The system leverages a powerful combination of multi-criteria decision-making algorithms - **ROC (Rank Order Centroid)** for criteria weighting and **SAW (Simple Additive Weighting)** for scoring - to provide personalized recommendations based on user preferences and criteria.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Key Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🔍 Smart Recommendation Engine
+- **ROC Algorithm**: Uses Rank Order Centroid method for user preference-based criteria weighting
+- **SAW Algorithm**: Implements Simple Additive Weighting for comprehensive scoring
+- **SMART Method**: Uses Simple Multi-Attribute Rating Technique for facility scoring
+- **Multi-Criteria Evaluation**: Considers 12 key criteria including price, location, facilities, and amenities
+- **Personalized Results**: Algorithm-based recommendations with percentage scoring
 
-## Learning Laravel
+### 🏘️ Comprehensive Property Management
+- **Detailed Listings**: Complete boarding house information with photos and descriptions
+- **Multi-Level Facility Tracking**: Room facilities, bathroom facilities, and public facilities
+- **Location Intelligence**: Distance-based recommendations from campus locations
+- **Room Classifications**: Various room sizes and property types (Putri/Putra/Campur)
+- **Photo Gallery**: Multiple photo support for each property
+- **Availability Tracking**: Real-time room availability monitoring
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 👥 User Experience
+- **Modern Interface**: Clean, responsive design using TailwindCSS and Bootstrap
+- **Advanced Filtering**: Filter by budget, facilities, distance, and room preferences
+- **Smart Search**: Quick search functionality with multiple filter options
+- **Recommendation System**: Algorithm-based suggestions with percentage scores
+- **Property Gallery**: Comprehensive photo viewing for each listing
+- **User Profiles**: Account management and preference settings
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🛡️ Admin Dashboard
+- **Property Management**: Complete CRUD operations for boarding house listings
+- **User Management**: Comprehensive user account administration
+- **Weight Configuration**: Adjust recommendation criteria weights and parameters
+- **System Analytics**: Monitor recommendation effectiveness and usage
+- **Facility Management**: Configure room, bathroom, and public facility options
+- **Media Management**: Handle property photos and file uploads
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🔧 Technology Stack
 
-## Laravel Sponsors
+- **Framework**: Laravel 10.x (PHP 8.1+)
+- **Frontend**: Blade Templates, TailwindCSS, Bootstrap 5.2.3, AlpineJS
+- **Database**: MySQL/SQLite
+- **Build Tools**: Vite
+- **Authentication**: Laravel Sanctum & Laravel UI
+- **URL Generation**: Eloquent Sluggable
+- **Styling**: TailwindCSS with PostCSS
+- **Icons**: Bootstrap Icons
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 🚀 Getting Started
 
-### Premium Partners
+### Prerequisites
+- PHP >= 8.1
+- Composer
+- Node.js & npm
+- MySQL Database
+- XAMPP (recommended for local development)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Installation
 
-## Contributing
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/kosanspk.git
+   cd kosanspk
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
 
-## Code of Conduct
+3. **Install JavaScript dependencies**
+   ```bash
+   npm install
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Environment setup**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## Security Vulnerabilities
+5. **Configure database**
+   Update your `.env` file with database credentials:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=kosanspk
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
+   ```
+   
+   *Note: The project also supports SQLite for development. A sample SQLite database is included.*
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Run migrations and seeders**
+   ```bash
+   php artisan migrate --seed
+   ```
 
-## License
+7. **Build assets**
+   ```bash
+   npm run build
+   # or for development
+   npm run dev
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. **Start the development server**
+   ```bash
+   php artisan serve
+   ```
+
+## 🏗️ Project Structure
+
+### Key Directories
+- **`app/Models/`**: Eloquent models for all entities (Kosan, facilities, criteria, etc.)
+- **`app/Services/`**: Business logic services (ROC, SAW, Recommendation algorithms)
+- **`app/Http/Controllers/`**: Request handling and route controllers
+- **`database/migrations/`**: Database schema definitions
+- **`resources/views/`**: Blade template files with TailwindCSS styling
+- **`public/storage/`**: File storage for property images
+
+### Key Models
+- **`Kosan`**: Main boarding house entity with comprehensive relationships
+- **`WeightSetting`**: Configurable criteria weights for recommendations
+- **Facility Models**: `FasilitasKamar`, `FasilitasKamarMandi`, `FasilitasUmum`
+- **Criteria Models**: `Keamanan`, `Kebersihan`, `Ventilasi`, `Aturan`, etc.
+
+### Services Architecture
+- **`KosanRecommendationService`**: Main recommendation engine
+- **`RocService`**: ROC algorithm implementation
+- **`SawService`**: SAW algorithm implementation
+- **`KosanService`**: General kosan business logic
+
+## 🧠 Algorithm Implementation
+
+### ROC (Rank Order Centroid) Algorithm
+The ROC algorithm implementation provides user preference-based criteria weighting:
+- **User-Driven Ranking**: Allows users to rank criteria by personal importance
+- **Centroid Calculation**: Uses mathematical formula: wi = (1/m) × Σ(1/j) for j=i to m
+- **Dynamic Weighting**: Adapts weights based on individual user preferences
+- **Preference Integration**: Combines user rankings with system recommendations
+
+### SAW (Simple Additive Weighting) Algorithm
+The SAW algorithm provides comprehensive scoring with normalization:
+- **Multi-Criteria Normalization**: Converts all criteria values to comparable scales (0-1 range)
+- **Weighted Scoring**: Applies ROC-derived weights to normalized values
+- **Cost/Benefit Handling**: Properly handles both cost criteria (lower is better) and benefit criteria (higher is better)
+- **Final Ranking**: Sums weighted scores for comprehensive alternative evaluation
+
+### SMART (Simple Multi-Attribute Rating Technique)
+The SMART method enhances facility evaluation:
+- **Facility Scoring**: Dedicated scoring system for room, bathroom, and public facilities
+- **Order-Based Weighting**: Calculates facility importance based on availability order
+- **Comprehensive Integration**: Combines with main criteria for holistic evaluation
+
+## 📊 Evaluation Criteria
+
+The system evaluates boarding houses based on 12 comprehensive criteria:
+
+| Criteria | Type | Weight | Description |
+|----------|------|--------|-------------|
+| **Price (Harga)** | Cost | 22% | Monthly rental cost |
+| **Distance to Campus** | Cost | 17% | Distance from campus location |
+| **Room Size** | Benefit | 10% | Room dimensions and space |
+| **Security (Keamanan)** | Benefit | 10% | Security measures and safety |
+| **Cleanliness (Kebersihan)** | Benefit | 8% | Hygiene and maintenance standards |
+| **Location Access** | Benefit | 7% | Access to supporting locations |
+| **Additional Fees (Iuran)** | Cost | 4% | Extra charges and fees |
+| **Rules (Aturan)** | Cost | 5% | House rules and restrictions |
+| **Ventilation** | Benefit | 5% | Air circulation quality |
+| **Room Facilities** | Benefit | 5% | In-room amenities |
+| **Bathroom Facilities** | Benefit | 3% | Bathroom amenities |
+| **Public Facilities** | Benefit | 2% | Common area facilities |
+
+## 🎨 User Interface
+
+### For Renters
+- **Home Page**: Browse featured properties with smart recommendations
+- **Advanced Search**: Multi-criteria filtering with real-time results
+- **Property Details**: Comprehensive information with photo galleries
+- **Algorithm-Based Recommendations**: ROC-SAW powered suggestions with scores
+- **Responsive Design**: Optimized for desktop and mobile viewing
+
+### For Administrators
+- **Admin Dashboard**: System overview with analytics and statistics
+- **Property Management**: Full CRUD operations for boarding house listings
+- **User Management**: Handle user accounts, roles, and permissions
+- **Weight Settings**: Configure and adjust recommendation algorithm parameters
+- **Facility Configuration**: Manage room, bathroom, and public facility options
+- **Media Management**: Handle property images and file uploads
+
+## 🔄 Current Implementation Status
+
+### ✅ Implemented Features
+- ✅ Complete Laravel 10.x application structure
+- ✅ ROC (Rank Order Centroid) algorithm implementation
+- ✅ SAW (Simple Additive Weighting) algorithm implementation
+- ✅ SMART (Simple Multi-Attribute Rating Technique) integration
+- ✅ Comprehensive 12-criteria evaluation system
+- ✅ Dynamic weight configuration via `WeightSetting` model
+- ✅ Multi-level facility management (room, bathroom, public)
+- ✅ Property management with photo support
+- ✅ User authentication and authorization
+- ✅ Admin dashboard for system management
+- ✅ Responsive design with TailwindCSS and Bootstrap
+- ✅ SQLite database support for development
+- ✅ Real-time recommendation scoring
+
+### 🚧 Areas for Enhancement
+- User preference setting interface
+- Review and rating system
+- Advanced search filters UI
+- Mobile app optimization
+- Performance caching improvements
+- API endpoints for external integration
+
+## 🤝 Contributing
+
+We welcome contributions! Please feel free to submit issues, feature requests, or pull requests.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+For support, please create an issue in the repository or contact the development team.
+
+---
+
+**KosanSPK** - Making boarding house hunting smarter with ROC-SAW-SMART algorithm combination! 🏠✨
